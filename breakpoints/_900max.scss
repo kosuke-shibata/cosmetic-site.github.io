@@ -1,0 +1,35 @@
+main {
+  #about {
+    .about-message {
+      margin: 0 auto;
+      width: 80%;
+      .about-text {
+        width: 90%;
+        h2 {
+          padding-left: 60px;
+        }
+        .about-more {
+          margin-bottom: 50px;
+        }
+      }
+    }
+    .about-img {
+      margin: 0px auto;
+      width: 90%;
+    }
+  }
+  #contact {
+    .form {
+      margin: 0;
+      padding-left: 20px;
+      form {
+        input {
+          &.submit {
+            margin: 0;
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+}
