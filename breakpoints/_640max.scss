@@ -1,1 +1,56 @@
 
+header {
+  .menu-command {
+    .nav {
+      width: 200px;
+    }
+    &.menu-open {
+      .nav {
+        li {
+          a {
+            &:hover {
+              &::after {
+                width: 170px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+main {
+  #about {
+    .about-message {
+      .about-text {
+        h2 {
+          padding-left: 0;
+          font-size: 18px;
+          text-align: right;
+          span {
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+  #contact {
+    .form {
+      width: 100%;
+      form {
+        width: 100%;
+        input {
+          &.name {
+            width: 90%;
+          }
+          &.mail {
+            width: 90%;
+          }
+        }
+        textarea {
+          width: 90%;
+        }
+      }
+    }
+  }
+}
