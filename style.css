@@ -1,1 +1,557 @@
 
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url(images/sharon-mccutcheon-NkQD-RHhbvY-unsplash.jpg);
+  background-size: cover;
+  background-color: rgba(255, 255, 255, 0.8);
+  background-blend-mode: lighten;
+  width: 100%;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  z-index: 10;
+  background: #fff;
+}
+
+header .main-title {
+  display: inline-block;
+}
+
+header .main-title img {
+  width: 200px;
+}
+
+header .menu-command .menu-button .menu-btn {
+  cursor: pointer;
+  background: #fff;
+  display: block;
+  border: none;
+  margin: -50px 20px 0 auto;
+}
+
+header .menu-command .menu-button .menu-btn span {
+  background: black;
+  height: 2px;
+  display: block;
+  margin-bottom: 9px;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+}
+
+header .menu-command .menu-button .menu-btn span:nth-child(1) {
+  width: 20px;
+}
+
+header .menu-command .menu-button .menu-btn span:nth-child(2) {
+  width: 27px;
+}
+
+header .menu-command .menu-button .menu-btn span:nth-child(3) {
+  width: 34px;
+  margin-bottom: 0;
+}
+
+header .menu-command .nav {
+  left: -500px;
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  display: block;
+  position: fixed;
+  z-index: 2;
+  width: 500px;
+  height: 1000px;
+  margin-top: -55px;
+  background: #000;
+  list-style: none;
+  float: left;
+}
+
+header .menu-command .nav li {
+  padding-left: 20px;
+  width: 300px;
+}
+
+header .menu-command .nav li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 30px;
+  line-height: 80px;
+}
+
+header .menu-command .bg {
+  left: -100%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  opacity: 0;
+  display: block;
+  position: fixed;
+  z-index: 1;
+  margin-top: -55px;
+  width: 100%;
+  height: 120%;
+  background: #4b4b4b;
+}
+
+header .menu-command.menu-open .menu-btn {
+  position: relative;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0);
+}
+
+header .menu-command.menu-open .menu-btn > span:nth-child(1) {
+  width: 30px;
+  -webkit-transform: translateY(11px) rotate(135deg);
+          transform: translateY(11px) rotate(135deg);
+}
+
+header .menu-command.menu-open .menu-btn > span:nth-child(2) {
+  -webkit-transform: translateX(-18px) scale(0);
+          transform: translateX(-18px) scale(0);
+}
+
+header .menu-command.menu-open .menu-btn > span:nth-child(3) {
+  width: 30px;
+  -webkit-transform: translateY(-11px) rotate(-135deg);
+          transform: translateY(-11px) rotate(-135deg);
+}
+
+header .menu-command.menu-open .nav {
+  left: 0;
+  opacity: 1;
+}
+
+header .menu-command.menu-open .nav li a {
+  padding-bottom: 3px;
+}
+
+header .menu-command.menu-open .nav li a::after {
+  content: "";
+  width: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid #fff;
+  display: block;
+}
+
+header .menu-command.menu-open .nav li a:hover::after {
+  width: 100%;
+  border-bottom: 2px solid #fff;
+}
+
+header .menu-command.menu-open .bg {
+  left: 0;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+main {
+  position: relative;
+}
+
+main #video {
+  padding-top: 80px;
+}
+
+main #video video {
+  width: 100%;
+}
+
+main #about {
+  margin: 100px auto;
+}
+
+main #about .about-message {
+  opacity: 0;
+  width: 55%;
+  background: #f8f7f7;
+}
+
+main #about .about-message.fade-in {
+  -webkit-animation-name: sample01;
+          animation-name: sample01;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+main #about .about-message .about-text {
+  width: 400px;
+  margin: 0 auto;
+}
+
+main #about .about-message .about-text h2 {
+  font-size: 24px;
+  padding: 80px 0;
+}
+
+main #about .about-message .about-text h2 span {
+  display: block;
+  font-size: 40px;
+}
+
+main #about .about-message .about-text p {
+  line-height: 30px;
+  padding-bottom: 20px;
+  font-size: 12px;
+}
+
+main #about .about-message .about-text .about-more {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  margin: 50px 0 150px;
+}
+
+main #about .about-message .about-text .about-more::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 13px;
+  right: -60px;
+  width: 40px;
+  height: 2px;
+  background: #000;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+main #about .about-message .about-text .about-more::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 9px;
+  right: -60px;
+  width: 8px;
+  height: 8px;
+  border: none;
+  border-left: 2px solid;
+  border-bottom: 2px solid;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+main #about .about-message .about-text .about-more:hover::before {
+  right: -70px;
+  width: 50px;
+}
+
+main #about .about-message .about-text .about-more:hover::after {
+  right: -70px;
+}
+
+main #about .about-img {
+  opacity: 0;
+  width: 50%;
+  margin: -450px 0 0 auto;
+  -webkit-box-shadow: 0 5px 5px #ccc;
+          box-shadow: 0 5px 5px #ccc;
+}
+
+main #about .about-img.fade-in {
+  -webkit-animation-name: sample01;
+          animation-name: sample01;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+main #about .about-img img {
+  width: 100%;
+}
+
+main #pick-up {
+  text-align: center;
+  overflow: hidden;
+  margin-bottom: 100px;
+}
+
+main #pick-up h3 {
+  padding-top: 100px;
+  font-size: 40px;
+}
+
+main #pick-up .swiper-wrapper {
+  margin: 50px auto;
+  -webkit-transition: linear;
+  transition: linear;
+}
+
+main #pick-up .swiper-wrapper .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+main #pick-up .swiper-wrapper .swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+main #pick-up .swiper-wrapper .swiper-slide:hover {
+  -webkit-transform: scale(1.05, 1.05);
+          transform: scale(1.05, 1.05);
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+main #diary {
+  margin: 0 auto;
+  text-align: center;
+}
+
+main #diary h3 {
+  padding-top: 100px;
+  font-size: 40px;
+}
+
+main #diary .diary-blocks {
+  margin: 50px auto;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main #diary .diary-blocks .diary-block {
+  opacity: 0;
+  margin: 30px auto 50px;
+  -webkit-box-shadow: 3px 3px 5px #e7e7e7;
+          box-shadow: 3px 3px 5px #e7e7e7;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+main #diary .diary-blocks .diary-block:hover {
+  -webkit-transform: scale(1.05, 1.05);
+          transform: scale(1.05, 1.05);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+main #diary .diary-blocks .diary-block img {
+  width: 300px;
+  vertical-align: middle;
+}
+
+main #diary .diary-blocks .diary-block p {
+  text-align: left;
+  background: #fff;
+  font-size: 12px;
+  line-height: 20px;
+  margin: 0 auto;
+  width: 260px;
+  padding: 20px;
+}
+
+main #contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #dddcdc;
+  padding-top: 50px;
+}
+
+main #contact .nav-2 {
+  list-style: none;
+  font-size: 30px;
+  line-height: 80px;
+  padding-top: 30px;
+}
+
+main #contact .nav-2 li {
+  padding: 0 100px;
+}
+
+main #contact .nav-2 li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+main #contact .form {
+  padding-top: 10px;
+}
+
+main #contact .form h3 {
+  font-size: 40px;
+  color: #fff;
+}
+
+main #contact .form form {
+  width: 700px;
+  padding: 10px;
+}
+
+main #contact .form form input {
+  margin-bottom: 20px;
+}
+
+main #contact .form form input.name {
+  width: 500px;
+  height: 24px;
+}
+
+main #contact .form form input.mail {
+  width: 500px;
+  height: 24px;
+}
+
+main #contact .form form input.submit {
+  margin-top: -35px;
+  display: block;
+  margin-left: auto;
+  width: 80px;
+  height: 30px;
+}
+
+main #contact .form form textarea {
+  width: 600px;
+  height: 100px;
+}
+
+main #contact:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+footer {
+  text-align: center;
+  background: #000;
+  color: #fff;
+  height: 60px;
+  line-height: 60px;
+}
+
+@-webkit-keyframes sample01 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes sample01 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1100px) {
+  main #contact {
+    display: block;
+    text-align: center;
+  }
+  main #contact .form {
+    width: 60%;
+    margin: 0 auto;
+    text-align: left;
+  }
+}
+
+@media (max-width: 900px) {
+  main #about .about-message {
+    margin: 0 auto;
+    width: 80%;
+  }
+  main #about .about-message .about-text {
+    width: 90%;
+  }
+  main #about .about-message .about-text h2 {
+    padding-left: 60px;
+  }
+  main #about .about-message .about-text .about-more {
+    margin-bottom: 50px;
+  }
+  main #about .about-img {
+    margin: 0px auto;
+    width: 90%;
+  }
+  main #contact .form {
+    margin: 0;
+    padding-left: 20px;
+  }
+  main #contact .form form input.submit {
+    margin: 0;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  header .menu-command .nav {
+    width: 200px;
+  }
+  header .menu-command.menu-open .nav li a:hover::after {
+    width: 170px;
+  }
+  main #about .about-message .about-text h2 {
+    padding-left: 0;
+    font-size: 18px;
+    text-align: right;
+  }
+  main #about .about-message .about-text h2 span {
+    text-align: left;
+  }
+  main #contact .form {
+    width: 100%;
+  }
+  main #contact .form form {
+    width: 100%;
+  }
+  main #contact .form form input.name {
+    width: 90%;
+  }
+  main #contact .form form input.mail {
+    width: 90%;
+  }
+  main #contact .form form textarea {
+    width: 90%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
